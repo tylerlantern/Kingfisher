@@ -567,6 +567,7 @@ open class ImageCache {
         }
     }
     
+  
     /// Gets an image for a given key from the disk storage.
     ///
     /// - Parameters:

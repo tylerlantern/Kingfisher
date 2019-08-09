@@ -28,26 +28,25 @@ import UIKit
 import Kingfisher
 
 class FetchDataViewController: UIViewController {
-    
+  
   @IBOutlet weak var imv: UIImageView!
   override func viewDidLoad() {
-        super.viewDidLoad()
-        let url = URL(string: "https://thumbs.dreamstime.com/z/aircraft-fighter-jets-chassis-released-maneuvers-against-background-bright-light-shine-aircraft-fighter-jets-155160403.jpg")!
-      
-      KingfisherManager.shared.retrieveData(
-        with: url, options: nil,
-        progressBlock: nil) {[weak self] (result) in
-          switch result {
-          case .success(let data) :
-            self?.imv.image = UIImage(data: data)
-          case .failure :
-            break
-          }
-      }
-        
+    super.viewDidLoad()
+    let url = URL(string: "https://wonderfulengineering.com/wp-content/uploads/2014/03/high-resolution-wallpapers-12.jpg")!
+    KingfisherManager.shared.retrieveData(
+      with: url, options: nil,
+      progressBlock: nil) {[weak self] (result) in
+        switch result {
+        case .success(let data) :
+          self?.imv.image = UIImage(data: data)
+        case .failure :
+          break
+        }
     }
     
-    
-    
-    
+  }
+  
+  
+  
+  
 }

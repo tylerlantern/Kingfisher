@@ -29,22 +29,12 @@ import Kingfisher
 class PrefetchImageViewController: UIViewController {
 
   @IBOutlet weak var imv: UIImageView!
+  
   override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "https://thumbs.dreamstime.com/z/aircraft-fighter-jets-chassis-released-maneuvers-against-background-bright-light-shine-aircraft-fighter-jets-155160403.jpg")
-        imv.kf.setImage(with: url)
+        let url = URL(string: "https://wonderfulengineering.com/wp-content/uploads/2014/03/high-resolution-wallpapers-12.jpg")
+        imv.kf.setImage(with: url, options: [.cacheOriginalImage])
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
 }

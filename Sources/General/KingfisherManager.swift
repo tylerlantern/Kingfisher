@@ -237,7 +237,7 @@ public class KingfisherManager {
         }
     }
   
-  
+  @discardableResult
   public func retrieveData(
     with resource: Resource,
     options: KingfisherOptionsInfo? = nil,
@@ -295,7 +295,6 @@ public class KingfisherManager {
       switch result {
       case .success(let value):
         // Add image to cache.
-       
         targetCache.store(
           value.image,
           original: value.originalData,
